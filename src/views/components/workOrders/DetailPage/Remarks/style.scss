@@ -1,0 +1,155 @@
+.workOrder_detail {
+  &__remarks {
+    padding: 0;
+    &__heading {
+      @include alignHeading;
+    }
+    &__body {
+      &__boxContainer {
+        margin-bottom: 1rem;
+        &__box {
+          padding: 1rem 2rem 2rem;
+          min-height: 70px;
+
+          &.green {
+            background-color: $status_green_rgba_light;
+            @include iconColors($status_green, $status_green_rgba);
+          }
+          &.green_dark {
+            background-color: $status_green_dark_rgba_light !important;
+            @include iconColors($status_green_dark, $status_green_dark_rgba);
+          }
+          &.black {
+            background-color: $status_black_rgba_light;
+            @include iconColors($status_black, $status_black_rgba);
+          }
+          &.blue {
+            background-color: $status_blue_rgba_light !important;
+
+            @include iconColors($status_blue, $status_blue_rgba);
+          }
+          &.brown {
+            background-color: $status_brown_rgba_light;
+
+            @include iconColors($status_brown, $status_brown_rgba);
+          }
+          &.brown_dark {
+            background-color: $status_brown_dark_rgba_light !important;
+            @include iconColors($status_brown_dark, $status_brown_dark_rgba);
+          }
+          &.yellow {
+            background-color: $status_yellow_rgba_light;
+            @include iconColors($status_yellow, $status_yellow_rgba);
+          }
+          &.purple {
+            background-color: $status_purple_rgba_light !important;
+            @include iconColors($status_purple, $status_purple_rgba);
+          }
+          &.red {
+            background-color: $status_red_rgba_light !important;
+            @include iconColors($status_red, $status_red_rgba);
+          }
+          &.red_dark {
+            background-color: $status_red_dark_rgba_light !important;
+            @include iconColors($status_red_dark, $status_red_dark_rgba);
+          }
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          &__role {
+            margin-left: auto;
+            margin-bottom: 0.5rem;
+            color: $text_color;
+            font-weight: 600;
+            font-size: 0.9rem;
+          }
+
+          &__content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: calc(100% - 1vw);
+            &__avatar {
+              margin-right: 2rem;
+              @include iconStyle(40px);
+            }
+            &__content {
+              box-sizing: border-box;
+              width: calc(80% - 1vw);
+              &--username {
+                white-space: nowrap;
+                max-width: 100%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                color: $primary;
+                font-weight: 500;
+                font-size: 1.2rem;
+                margin-bottom: 0;
+              }
+              &--action {
+                font-weight: 600;
+                font-size: 1.1rem;
+                max-width: 100%;
+              }
+
+              &--comment {
+                margin-top: 2rem;
+                font-weight: 600;
+                font-size: 0.9rem;
+                color: #8d8787;
+                max-width: 100%;
+                overflow-wrap: anywhere;
+              }
+            }
+          }
+          border-radius: 10px;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          -ms-border-radius: 10px;
+          -o-border-radius: 10px;
+        }
+        &__time {
+          display: block;
+          text-align: right;
+          margin: 0.5rem 0rem 2rem 0rem;
+          color: $text_color;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  &_default_workorder {
+    padding: 1rem 2rem 2rem;
+    &__default_icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 20px;
+      border-style: solid;
+      border-width: 4px;
+      border-color: #f2f2f2;
+      background-color: $status_green;
+      margin-right: 1rem;
+      margin-left: 1rem;
+    }
+
+    &_text_wrapper {
+      margin-left: 20px;
+      time {
+        color: $text_color;
+        font-weight: 500;
+      }
+    }
+
+    &__text_style {
+      color: $cyan;
+      font-family: "Sofia Pro Regular";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      margin: 0;
+      margin-bottom: 5px;
+    }
+  }
+}

@@ -1,0 +1,57 @@
+@import "~assets/scss/mixins";
+
+.sub-tabs {
+  display: flex;
+  align-items: center;
+  z-index: 997;
+  &__tab {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    border-radius: 0px 35px 0px 0px;
+    background: #e0e3eb;
+    padding: 10px 16px;
+    @include moreThanTablet() {
+      padding: 10px 32px;
+    }
+    cursor: pointer;
+    min-height: 40px;
+    &:not(:first-child) {
+      position: relative;
+      &::before {
+        content: " ";
+        position: absolute;
+        left: -35px;
+        width: 35px;
+        height: 40px;
+        background: #e0e3eb;
+        z-index: -1;
+      }
+    }
+    font-family: "Sofia Pro Regular";
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: #959db2;
+    &-icon {
+    }
+    &-text {
+    }
+  }
+}
+
+.sub-tabs__tab.sub-tabs__tab-active {
+  background: #fff;
+  font-family: "Sofia Pro Regular";
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #2a347b;
+  border-radius: 5px 35px 0px 0px;
+  &::before {
+    border-top-right-radius: 5px;
+  }
+}

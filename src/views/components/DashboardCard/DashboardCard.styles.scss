@@ -1,0 +1,37 @@
+.dashboard-card {
+  min-height: 156px;
+  background: #fff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  // justify-content: center;
+  border-radius: 10px;
+  &__main {
+    margin-left: 100px;
+    &-heading {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 16px;
+      letter-spacing: -0.01em;
+      color: #33383f;
+      margin-bottom: 14px;
+    }
+    &-number {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -0.03em;
+      color: #1a1d1f;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+  }
+}

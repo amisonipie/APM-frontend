@@ -1,0 +1,55 @@
+.cm-card {
+  background: #ffffff;
+  box-shadow: 0px 100px 80px rgba(198, 197, 217, 0.07),
+    0px 41.7776px 33.4221px rgba(198, 197, 217, 0.0503198),
+    0px 22.3363px 17.869px rgba(198, 197, 217, 0.0417275),
+    0px 12.5216px 10.0172px rgba(198, 197, 217, 0.035),
+    0px 6.6501px 5.32008px rgba(198, 197, 217, 0.0282725),
+    0px 2.76726px 2.21381px rgba(198, 197, 217, 0.0196802);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 25px;
+  min-width: 520px;
+  min-height: 440px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-text {
+      font-family: 'sofia Pro Bold';
+      font-style: normal;
+      font-size: 20px;
+      line-height: 30px;
+      color: #000000;
+    }
+    &-icon {
+      cursor: pointer;
+    }
+  }
+  &__body {
+    margin-top: 50px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    &-text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      &-icon {
+      }
+      &-txt {
+        font-family: 'sofia Pro Bold';
+        font-size: 14px;
+        line-height: 24px;
+        color: #000000;
+      }
+    }
+  }
+}

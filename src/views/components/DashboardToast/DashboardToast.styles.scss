@@ -1,0 +1,98 @@
+.dashboard-toast {
+  height: 80px;
+  overflow: hidden;
+  margin-bottom: 5px;
+  margin-left: -2.2rem;
+  margin-right: -2.2rem;
+  margin-top: -25px;
+  background-color: #eb5757;
+  @media screen and (max-width: 670px) {
+    height: unset;
+  }
+  &-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 48px;
+    padding-right: 48px;
+    align-items: center;
+    height: 100%;
+    @media screen and (max-width: 670px) {
+      flex-wrap: wrap;
+      padding: 5%;
+      justify-content: center;
+    }
+    &-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 139.51px;
+      height: 40px;
+      border: 1px solid #e6e8ee;
+      box-sizing: border-box;
+      border-radius: 9.19px;
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+      @media screen and (max-width: 670px) {
+        margin-top: 2%;
+      }
+      &:hover {
+        transform: scale(1.03);
+      }
+
+      p {
+        margin: 0;
+        font-family: "Sofia Pro Light";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+
+    &-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      img {
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.03);
+        }
+      }
+      p {
+        margin-bottom: 0px;
+      }
+      &-number {
+        font-family: "Sofia Pro Light";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 24px;
+        text-align: center;
+        color: #f2f2f2;
+      }
+      &-text {
+        font-family: "Sofia Pro Light";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 24px;
+        margin-left: 26px;
+        margin-right: 26px;
+        color: #ffffff;
+      }
+    }
+  }
+  &-alert-exit {
+    opacity: 1;
+  }
+  &-alert-exit-active {
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+  }
+}

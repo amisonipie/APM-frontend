@@ -1,0 +1,31 @@
+.workOrder_detail {
+  &__assetInformation {
+    padding: 0;
+    &__heading {
+      @include alignHeading;
+    }
+    &__body {
+      @include alignHeading;
+      flex-wrap: wrap;
+      &__box {
+        margin-bottom: 2rem;
+        padding: 1rem;
+        min-width: 200px;
+        max-width: 250px;
+        width: 250px;
+        p {
+          color: $text_color;
+          margin-bottom: 2rem;
+          font-size: 1.2rem;
+          font-family: $font_family_secondary_light;
+        }
+        h2 {
+          font-size: 1.4rem;
+        }
+        &:not(:last-child) {
+          border-right: $apm-border;
+        }
+      }
+    }
+  }
+}

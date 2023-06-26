@@ -1,0 +1,192 @@
+.sideBarActionBtn {
+  margin-bottom: 3rem;
+  @include flex(flex-end, center);
+  flex-wrap: wrap;
+  .custom-primary-btn {
+    padding: 1rem 3rem;
+    &:last-child {
+      margin-left: 1rem;
+    }
+  }
+}
+.more-filter {
+  font-weight: 600;
+  font-size: 12px;
+  color: #2a347b;
+  justify-content: flex-end;
+  cursor: pointer !important;
+}
+.more-filter:hover {
+  text-shadow: 0 0.1px 15px #2a347b;
+  transition: all 0.2s ease-in-out;
+}
+.more-filter span {
+  word-break: "keep-all";
+}
+
+.d-flex .form-control.customDatePicker {
+  height: 44px;
+}
+
+.d-flex .form-control {
+  padding: 0.7rem 0.7rem;
+}
+
+.Modal-main .form-control.customDatePicker {
+  height: 44px;
+}
+
+.Modal-main .form-control {
+  padding: 0.7rem 0.7rem;
+}
+
+.h-44 {
+  height: 44px !important;
+
+  & .select__control {
+    height: 100%;
+  }
+}
+// as before
+.select__indicator svg,
+.h-44__indicator svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+.select__clear-indicator {
+  padding-left: 5px;
+  padding-right: 0;
+}
+// ! If you change width here then change
+// ! in RenderFilters.jsx file as we render filter dynamic
+.w-350 {
+  width: 236px;
+}
+
+.modal-body .w-350 {
+  width: 100%;
+}
+
+.Modal-main .modal-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 27px;
+  line-height: 40px;
+  color: #2a347b;
+}
+@media screen and (max-width: 1856px) {
+  .hide-filter-field-lg {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 1559px) and (max-width: 1541px) {
+  .hide-filter-field-search-manufacturer {
+    display: none !important;
+  }
+}
+// ! drawer-second open in top
+.show-in-top {
+  z-index: 1200 !important;
+}
+
+.Modal-main {
+  padding: 0 !important;
+
+  .modal-body {
+    min-height: 270px;
+    overflow: hidden !important;
+  }
+  .Modal-data-main {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+
+  .block-in-modal {
+    display: flex !important;
+  }
+
+  .modal-content {
+    height: 100vh;
+  }
+  .modal-dialog {
+    height: max-content;
+  }
+
+  .listing__actions--smartSearch {
+    // margin-right: 0 !important;
+  }
+  .filters_select {
+    margin-left: 0;
+  }
+
+  @include moreThanTablet() {
+    .modal-dialog {
+      max-width: 30% !important;
+      // background-color: #f2f5fb;
+      border-radius: 30px !important;
+      height: max-content;
+    }
+
+    .modal-content {
+      border-radius: 30px !important;
+      height: 100%;
+    }
+
+    .modal-header {
+      padding: 3rem 4rem 0.8rem 4rem !important;
+      border-bottom: 3px solid #f2f5fb !important;
+      background: none !important;
+    }
+    .borderless {
+      border-bottom: 0px !important;
+    }
+
+    .modal-title {
+      // font-family: 'Sofia Pro';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 27px;
+      line-height: 40px;
+
+      color: #000000;
+    }
+
+    .Model-h4 {
+      padding: 1.5rem 3.5rem 0 3.5rem;
+      text-transform: capitalize;
+      // font-family: 'Sofia Pro';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 25px;
+      color: #2a347b;
+    }
+
+    .Modal-data-main {
+      padding: 5% 10% !important;
+
+      height: 500px;
+      overflow: hidden;
+      overflow-y: auto !important;
+
+      .mr-lg-1 {
+        margin-right: 0 !important;
+      }
+    }
+
+    .Modal-img-div {
+      cursor: pointer;
+    }
+  }
+}
+.retire-asset {
+  font-family: Sofia Pro Regular;
+  font-weight: 500;
+  font-size: 2rem;
+}
+.custom-btn-style{
+  font-family: Sofia Pro Regular;
+  font-weight: 500;
+  font-size: 1.3rem;
+  border-radius: 10px;
+}

@@ -1,0 +1,125 @@
+.customInputContainer {
+  .iconInput,
+  .customInput,
+  .customDatePicker {
+    min-height: 44px !important;
+    border-top-left-radius: 4px !important;
+    border-top-right-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+
+    padding: 0.7rem 0.7rem !important;
+    height: 100% !important;
+
+    &::placeholder {
+      letter-spacing: 0 !important;
+      font-weight: 400 !important;
+      font-size: 1.2rem !important;
+      line-height: 1rem !important;
+      color: #caced8;
+      font-family: Sofia Pro Light;
+    }
+  }
+
+  .form-check-input {
+    margin-left: 0;
+  }
+
+  .append-icon {
+    padding: 0.1rem 0.1rem;
+    background: white;
+    border: 0.5px solid rgba(149, 157, 178, 0.3) !important;
+    border-radius: 10px;
+    box-shadow: none;
+    width: auto;
+  }
+
+  .iconInput {
+    border: 1px solid hsl(0, 0%, 80%) !important;
+    border-right: 0 !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+  }
+
+  .iconInput.active,
+  .customInput.active,
+  .customDatePicker.active,
+  .input-group-text.active {
+    border-color: #2a347b !important;
+  }
+
+  .input-group-text {
+    font-size: 1.3rem;
+    color: #959db2;
+
+    padding: 0.7rem 0.7rem;
+    margin-bottom: 0;
+    text-align: center;
+    background-color: #ededed;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-left: 0 !important;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    font-size: 0.96rem;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #4e5154;
+    white-space: nowrap;
+
+    background-color: #ffffff;
+
+    padding: 0.7rem 0.7rem;
+    margin-bottom: 0;
+    text-align: center;
+
+    display: flex;
+    padding: 8px;
+
+    svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+
+  .custom-inputGroupTag {
+    .customInput {
+      opacity: 0.8;
+      box-shadow: none;
+      padding-right: 0 !important;
+      border-right: none !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+
+      &:focus {
+        border: 0.5px solid #c3d1ed !important;
+        border-right: none !important;
+      }
+    }
+    .input-group-append,
+    .input-group-text {
+      opacity: 0.8;
+      .active {
+        border: 0.5px solid #c3d1ed !important;
+        border-left: none !important;
+      }
+    }
+  }
+}
+.customInputContainer{
+  .undefined {
+    .customInput.form-control.undefined.h-44{
+      &:focus {
+        &::placeholder {
+          transform: unset !important;
+        }
+      }
+    }
+  }
+}

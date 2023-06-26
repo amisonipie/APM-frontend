@@ -1,0 +1,62 @@
+.workOrder_detail {
+  &__steps {
+    &__body {
+      &__heading {
+      align-items: center !important;
+        @include alignHeading;
+      }
+      &__desc {
+        letter-spacing: 1px;
+        color: $primary;
+        font-size: 1.4rem;
+        font-family: $font_family_secondary_light;
+      }
+    }
+    &__footer {
+      background-color: inherit;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &__heading {
+        @include alignHeading;
+        h2 {
+          color: $text_color;
+          font-weight: lighter;
+          font-family: $font_family_secondary_light;
+        }
+        margin-right: 2rem;
+      }
+      &__files {
+        @include flex(flex-start, center);
+        flex-wrap: wrap;
+        &__box {
+          width: 60px;
+          height: 60px;
+          border-radius: 10px;
+          background: #dde0fe;
+          &.transparent {
+            background: transparent;
+          }
+          margin: 0rem 1rem 1rem 0rem;
+
+          @include flex(center, center);
+          figure {
+            margin-bottom: 0;
+          }
+          img,
+          svg {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+          }
+        }
+      }
+    }
+  }
+}

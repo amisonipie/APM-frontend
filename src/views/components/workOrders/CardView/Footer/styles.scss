@@ -1,0 +1,78 @@
+.cardView {
+  &__footer {
+    padding: 0.5rem 1rem 0.5rem;
+    margin-top: auto;
+    border-top: 1px solid rgba(174, 181, 199, 0.2);
+    display: flex;
+    min-height: 52px;
+    &__dueDate {
+      padding-bottom: 0;
+      &--text {
+        color: $text_color;
+        margin-bottom: 0rem;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-family: $font_family_secondary;
+      }
+      &__dateContainer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        &--icon {
+          margin: 0;
+          svg {
+            width: 1.7rem;
+            height: 1.7rem;
+          }
+        }
+        &--time {
+          margin-left: 0.5rem;
+          margin-bottom: 0;
+          color: $status_red;
+          font-size: 1.2rem;
+          font-family: $font_family_secondary;
+          &.over-due {
+            color: $text_color;
+            -webkit-text-decoration-line: line-through; /* Safari */
+            text-decoration-line: line-through;
+          }
+        }
+      }
+    }
+    &__actionBtnContainer {
+      margin-left: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &--actionBtn.light {
+        padding-left: 2.5rem !important;
+        padding-right: 2.5rem !important;
+      }
+    }
+    &__asset {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      align-items: center;
+      &__ticketId {
+        &--text,
+        &--icon {
+          margin-bottom: 0;
+        }
+        &--text {
+          color: $text_color;
+          font-size: 1rem;
+          font-family: $font_family_secondary;
+
+          margin-left: 0.5rem;
+        }
+        &--icon {
+          svg {
+            width: $listing_medium_icon;
+            height: $listing_medium_icon;
+          }
+        }
+      }
+    }
+  }
+}

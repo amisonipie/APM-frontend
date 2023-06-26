@@ -1,0 +1,26 @@
+@import "./Header/styles.scss";
+@import "./Main/styles.scss";
+@import "./Footer/styles.scss";
+
+.cardView {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $primary_support;
+  box-shadow: 0px 10px 20px rgba(198, 196, 228, 0.4);
+  border-radius: 15px;
+  padding: 0;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: 0px 0px 2px rgba(198, 196, 228, 0.4);
+  }
+  // background-color: turquoise;
+  // margin: 0 1rem 1rem 0rem;
+  // &.thirdItem {
+  //   margin: 0 1rem 0rem 0rem;
+  // }
+}
+
+.ListingCustomButton {
+  border-radius: 44px;
+}

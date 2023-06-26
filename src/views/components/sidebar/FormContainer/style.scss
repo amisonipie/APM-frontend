@@ -1,0 +1,70 @@
+$fontColor: #2a347b;
+@mixin transitionCT($time) {
+  transition: all $time ease-in-out;
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -ms-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+}
+.formContainer {
+  background: rgba(242, 245, 251, 0.3);
+  padding: 2.2rem 2rem;
+  @include transitionCT(0.5s);
+  &:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+
+  &__heading {
+    padding: 0;
+    @include flex(flex-start, flex-start);
+    &__IC {
+      @include flex(flex-start, flex-end);
+
+      .headingIC--figure {
+        svg {
+          width: 25px;
+          height: 25px;
+        }
+      }
+      .headingIC--label {
+        font-size: 1.9rem;
+        font-family: $font_family_secondary;
+        font-weight: 600;
+        margin-left: 1rem;
+        color: $fontColor;
+        margin-bottom: 0;
+      }
+    }
+    &--toggler {
+      margin-left: auto;
+      cursor: pointer;
+      color: $fontColor;
+      @include transitionCT(0.5s);
+      transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+    }
+    margin-bottom: 2rem;
+  }
+  max-height: 50px;
+  overflow: hidden;
+  &.show {
+    overflow: visible;
+    max-height: 100%;
+    .formContainer__heading {
+      &--toggler {
+        transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+      }
+    }
+  }
+}
+.Workorder_Form_container {
+  background: none !important;
+  padding: 0 !important;
+}

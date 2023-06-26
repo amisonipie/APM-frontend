@@ -1,0 +1,60 @@
+@import "~assets/scss/mixins";
+
+.dashboard-state-card {
+  height: 80px;
+  // border-radius: 6px;
+  margin-bottom: 22px;
+  margin-top: 29px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 19px;
+  padding-right: 19px;
+  align-items: center;
+
+  &:not(:last-child){
+
+   border-bottom: 1px solid rgba(149, 157, 178, 0.3);
+   padding-bottom: 10px;
+   border-right: 0;
+
+   @include moreThanMobile() {
+     border-bottom: 0px;
+     border-right: 1px solid rgba(149, 157, 178, 0.3);
+   }
+  }
+
+  @media screen and (max-width: 1023px) {
+    margin-top: unset;
+    &:first-child {
+      margin-top: 10px;
+    }
+    margin-bottom: 10px;
+  }
+  &-number {
+    font-family: "Sofia Pro Light";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 24px;
+    text-align: center;
+    color: #2a347b;
+  }
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      margin: 0px;
+      font-style: normal;
+      padding-left: 25px;
+      font-weight: 700;
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 24px;
+      text-align: center;
+      color: #828282;
+    }
+  }
+}

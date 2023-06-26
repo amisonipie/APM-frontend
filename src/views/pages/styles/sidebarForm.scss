@@ -1,0 +1,223 @@
+.sidebarForm {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+
+  &__container {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    &__content {
+      @include flex(space-between, center);
+      width: 100%;
+      &__heading {
+        max-width: 90%;
+        .headingIC--figure {
+          svg {
+            width: 35px;
+            height: 35px;
+          }
+        }
+        .headingIC--label {
+          margin-bottom: 0;
+          font-family: $font_family_secondary;
+          font-size: 1.7rem;
+          margin-left: 2rem;
+          color: $primary !important;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+      &--close {
+        margin: 0;
+        margin-left: auto;
+        cursor: pointer;
+        transition: $apm_transition;
+        -webkit-transition: $apm_transition;
+        -moz-transition: $apm_transition;
+        -ms-transition: $apm_transition;
+        -o-transition: $apm_transition;
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+    &__divider {
+      border-top: 1.5px solid $apm-border-color;
+      width: calc(100% + 6rem);
+      margin-left: -3rem;
+    }
+
+    &.zeroMargin {
+      margin-bottom: 0rem;
+      padding-bottom: 0rem;
+      .sidebarForm__container {
+        &__content {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+        &__divider {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .formContainer {
+    .row {
+      flex-wrap: wrap;
+    }
+
+    .detailView {
+      .form-group {
+        label {
+          font-size: 1rem;
+          font-family: $font_family_secondary_light;
+          color: $text_color;
+          font-weight: lighter;
+          opacity: 0.7;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1.2rem;
+          font-family: $font_family_secondary;
+          color: $primary;
+        }
+      }
+    }
+  }
+  .form-group {
+    position: relative;
+    .select__control,
+    .React__control.select__control--is-focused,
+    .React__control.React__control--is-focused,
+    .form-control,
+    .flatpickr-input {
+      padding: 1.5rem;
+      color: #2a347b;
+      border: $apm-border;
+      border-radius: 4px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+      box-shadow: none;
+      outline: none;
+      opacity: 0.8;
+      letter-spacing: 0.5px;
+      font-family: $font_family_secondary;
+      font-size: 1.2rem;
+      &::placeholder {
+        font-weight: 400 !important;
+        font-family: Sofia Pro Light;
+        letter-spacing: 0.5px;
+        color: #caced8;
+        font-size: 1.2rem;
+      }
+    }
+    .customDatePicker {
+      padding: 1.7rem;
+    }
+    label {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      font-family: $font_family_secondary;
+      &.required,
+      &.optional {
+        &::after {
+          font-size: 2rem;
+          position: absolute;
+          right: 0;
+        }
+      }
+      &.required {
+        &::after {
+          content: "*";
+          color: $red;
+        }
+      }
+      &.optional {
+        &::after {
+          content: "Optional";
+          color: $green;
+          font-size: 1rem;
+        }
+      }
+    }
+    .select__control,
+    .React__control.select__control--is-focused,
+    .React__control.React__control--is-focused {
+      padding: 0 !important;
+    }
+    .select {
+      &__placeholder {
+        color: #caced8;
+      }
+    }
+
+    .select__menu,
+    .React__menu {
+      border-radius: 10px;
+      box-shadow: 0px 15px 25px rgba(198, 196, 228, 0.2);
+      .select__menu-list,
+      .React__menu-list {
+        padding: 0;
+        .select__option,
+        .React__option {
+          padding: 1.5rem;
+          &:nth-child(1) {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+          }
+          &:last-child() {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+          }
+          &:not(:last-child) {
+            border-bottom: $apm-border;
+          }
+
+          &:hover {
+            background-color: lighten($color: $primary, $amount: 10%);
+            color: $white;
+          }
+          &.select__option--is-selected,
+          &.React__option--is-selected {
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  .dateGroup {
+    .form-control:disabled,
+    .form-control[readonly] {
+      background-color: #fff !important;
+    }
+  }
+}
+.guestPage {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  .sidebarForm {
+    &__container {
+      margin: 0rem 0rem 1.5rem;
+      padding: 0 0rem 1rem 0rem;
+    }
+  }
+}
+.workOrder-Heading-label {
+  margin-left: 0 !important;
+
+
+}
+.Workorder-Container {
+  padding: 0 0 1rem 2rem !important;
+  border-bottom: none !important;
+    margin: -1rem -3rem 0.5rem !important;
+}

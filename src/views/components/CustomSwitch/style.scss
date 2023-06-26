@@ -1,0 +1,54 @@
+.customSwitchParent {
+  &--label {
+    min-width: 50px;
+  }
+  &__buttonsContainer {
+    .custom-primary-btn {
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+    }
+  }
+}
+.customSwitch {
+  .custom-control-label {
+    &::before {
+      background-color: #efefef;
+      height: 2.2rem;
+      width: 4.8rem;
+      border-radius: 50px;
+      top: -4px;
+      box-shadow: inset 0px 6px 8px 3px rgba(0, 0, 0, 0.1) !important;
+    }
+    &::after {
+      width: 1.7rem;
+      height: 1.7rem;
+      top: -1px;
+      left: 4px;
+      background: linear-gradient(180deg, #ffffff 0%, #e8eaea 100%);
+      border-radius: 100%;
+      filter: drop-shadow(1.5px 0px 1.7px rgba(0, 0, 0, 0.25));
+      -webkit-filter: drop-shadow(1.5px 0px 1.7px rgba(0, 0, 0, 0.25));
+      -webkit-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+    }
+  }
+  .custom-control-input:checked ~ .custom-control-label {
+    &::before {
+      background: #76ee59;
+    }
+    &::after {
+      transform: translateX(2.49rem);
+      filter: drop-shadow(-1.5px 0px 1.7px rgba(0, 0, 0, 0.25));
+      -webkit-filter: drop-shadow(-1.5px 0px 1.7px rgba(0, 0, 0, 0.25));
+      -webkit-transform: translateX(2.49rem);
+      -moz-transform: translateX(2.49rem);
+      -ms-transform: translateX(2.49rem);
+      -o-transform: translateX(2.49rem);
+    }
+  }
+}

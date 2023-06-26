@@ -1,0 +1,151 @@
+.replacedParts {
+  &__addPart {
+    min-height: 100px;
+    @include flex(center, center);
+    &__box {
+      cursor: pointer;
+      @include flex(center, flex-end);
+      figure {
+        margin-bottom: 0;
+      }
+      p {
+        margin-bottom: 0.5rem;
+        color: $text_color;
+        text-transform: uppercase;
+        font-family: $font_family_secondary;
+      }
+      &.active {
+        pointer-events: none;
+      }
+    }
+  }
+  &__parts {
+    overflow-x: auto;
+    .table {
+      border-color: $primary;
+      overflow-x: auto;
+      tbody {
+        td {
+          text-align: center;
+          font-family: $font_family_secondary;
+          color: $primary;
+          font-size: 1.2rem;
+          overflow-wrap: anywhere;
+          text-align: left;
+          min-width: 70px;
+          &:last-child {
+            text-align: right;
+          }
+        }
+      }
+    }
+    .row {
+      .col-6,
+      .col-12 {
+        &:not(:last-child) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+.workOrder_detail {
+  &__technicianForm {
+    padding: 0;
+    padding-left: 2rem;
+    @include respond(md) {
+      padding: 0;
+    }
+    &__heading {
+      @include alignHeading;
+    }
+    &-info {
+      &-heading {
+        font-family: "Sofia Pro Light";
+        font-size: 16px;
+        line-height: 16px;
+        color: #959db2;
+        display: flex;
+      }
+      &-desc {
+        margin-top: 16px;
+        font-family: "Sofia Pro Light";
+        font-size: 16px;
+        line-height: 16px;
+        color: #2a347b;
+        line-height: 1.8rem;
+      }
+      &-divider {
+        height: 1px;
+        width: 100%;
+        background-color: #f2f5fb;
+        margin-top: 30px;
+        margin-bottom: 30px;
+      }
+      &-icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &-parts {
+      &-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &-text {
+          margin-top: 16px;
+          font-family: "Sofia Pro Light";
+          font-size: 16px;
+          line-height: 16px;
+          color: #2a347b;
+        }
+      }
+    }
+
+    &-results {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      &-result {
+        min-height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 0.5px solid rgba(149, 157, 178, 0.3) !important;
+
+        box-sizing: border-box;
+        border-radius: 10px;
+        padding: 0px 15px;
+        &-text {
+          margin: 0px;
+          font-family: "Sofia Pro Light";
+          font-size: 16px;
+          line-height: 16px;
+          color: #2a347b;
+        }
+      }
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 4px;
+      &-text {
+        font-family: "Sofia Pro Light";
+        font-size: 16px;
+        line-height: 16px;
+        color: #2a347b;
+        line-height: 1.8rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      &-container {
+        margin-top: 16px;
+      }
+    }
+  }
+}
+.Workorder-Container {
+}

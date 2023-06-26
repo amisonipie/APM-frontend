@@ -1,0 +1,49 @@
+.cardView {
+  &__main {
+    padding: 0.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    &--subject {
+      font-size: 1.8rem;
+      font-weight: 600;
+      font-family: Sofia Pro Bold;
+      margin-bottom: 1rem;
+      // overflow: hidden;
+      // text-overflow: ellipsis;
+      // white-space: nowrap;
+
+      display: -webkit-box;
+      // max-width: 200px;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    &--asset {
+      // color: $text_color;
+      // font-size: 1.1rem;
+      // font-family: $font_family_secondary;
+      // opacity: 0.7;
+      // background-color: aqua;
+      display: flex;
+      flex-direction: column;
+      &-name {
+        color: $text_color;
+        font-size: 1.1rem;
+        font-family: $font_family_secondary;
+        opacity: 0.7;
+        margin-bottom: 0.5rem;
+      }
+      // margin-bottom: 1.9rem;
+      &-assetId {
+        font-size: 1.1rem;
+        font-family: $font_family_secondary;
+        opacity: 0.7;
+        color: $text_color;
+        margin-bottom: 1.9rem;
+      }
+    }
+  }
+}

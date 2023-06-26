@@ -1,0 +1,166 @@
+.authForm {
+  color: $primary_support;
+  text-align: center;
+  &--Heading {
+    font-size: 3.5rem;
+    font-family: $font_family_primary;
+    margin-bottom: 1rem;
+    color: $primary_support;
+  }
+  &--subHeading {
+    color: $primary_support;
+    font-size: 1.4rem;
+    font-family: $font_family_primary;
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+  }
+
+  .form-control {
+    background-color: $primary;
+    border: none;
+    color: $primary_support;
+    margin-bottom: 2rem;
+    padding: 3rem !important;
+    font-size: 1.3rem;
+    opacity: 0.8;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-family: $font_family_primary;
+    &::placeholder {
+      color: $primary_support;
+      font-size: 1.3rem;
+      font-family: $font_family_primary;
+    }
+  }
+
+  .form-check {
+    padding: 0;
+    .form-check-input {
+      /*display:  none;*/
+      margin-left: 0;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+      -webkit-appearance: none;
+      display: none;
+    }
+    .form-check-label {
+      display: flex;
+      position: relative;
+      font-size: 1.2rem;
+      font-weight: 400;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+      color: $primary_support !important
+      ;
+      font-family: $font_family_primary;
+      cursor: pointer;
+    }
+    .form-check-label:before,
+    .form-check-label:after {
+      pointer-events: none;
+    }
+
+    .form-check-label:before {
+      display: flex;
+      content: " ";
+      height: 20px;
+      width: 20px;
+      background: $text_color;
+      margin-right: 10px;
+      opacity: 0.5;
+      border-radius: 5px;
+    }
+    .form-check-label:after {
+      position: absolute;
+      top: 7px;
+      left: 7px;
+      display: flex;
+      content: " ";
+      height: 12px;
+      width: 12px;
+      background: $primary_support;
+      transform: scale(0);
+      transition: transform 0.3s ease;
+      -webkit-transition: transform 0.3s ease;
+      -moz-transition: transform 0.3s ease;
+      -ms-transition: transform 0.3s ease;
+      -o-transition: transform 0.3s ease;
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+      -ms-transform: scale(0);
+      -o-transform: scale(0);
+    }
+    .form-check-label:after {
+      height: 7px;
+      width: 14px;
+      top: 5px;
+      left: 5px;
+      border-bottom: solid 4px $primary_support;
+      border-left: solid 4px $primary_support;
+      background: none;
+      transform: rotate(-45deg) scale(0);
+      transition: transform 0.1s ease, opacity 0.1s ease;
+      transform-origin: center center;
+      -webkit-transition: transform 0.1s ease, opacity 0.1s ease;
+      -moz-transition: transform 0.1s ease, opacity 0.1s ease;
+      -ms-transition: transform 0.1s ease, opacity 0.1s ease;
+      -o-transition: transform 0.1s ease, opacity 0.1s ease;
+      -webkit-transform: rotate(-45deg) scale(0);
+      -moz-transform: rotate(-45deg) scale(0);
+      -ms-transform: rotate(-45deg) scale(0);
+      -o-transform: rotate(-45deg) scale(0);
+    }
+
+    .form-check-input:checked + .form-check-label:after {
+      opacity: 1;
+      transform: rotate(-45deg) scale(0.8);
+      -webkit-transform: rotate(-45deg) scale(0.8);
+      -moz-transform: rotate(-45deg) scale(0.8);
+      -ms-transform: rotate(-45deg) scale(0.8);
+      -o-transform: rotate(-45deg) scale(0.8);
+    }
+  }
+
+  .custom-primary-btn {
+    padding: 2rem 0 !important;
+    background-color: $primary_green !important;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    opacity: 0.9;
+    transition: $apm_transition;
+
+    font-family: $font_family_primary;
+    &:hover,
+    &:focus {
+      background-color: $primary_green !important;
+      opacity: 1;
+      .custom-primary-btn {
+        &--text,
+        &--icon {
+          color: $primary_support !important;
+        }
+      }
+    }
+  }
+  &--emailSentMessage {
+    line-height: 1.5;
+    font-size: 1.4rem;
+    padding: 2rem 1.5rem;
+    background-color: $primary;
+    color: $primary_support !important;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 1;
+    -o-border-radius: 1;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+}

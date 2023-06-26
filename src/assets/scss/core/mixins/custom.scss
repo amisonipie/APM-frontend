@@ -1,0 +1,90 @@
+@mixin alignHeading {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  margin-bottom: 2.5rem;
+  figure {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  figure,
+  h2,
+  .headingIC--label {
+    color: $primary;
+    font-size: 1.5rem !important ; 
+    font-family: $font_family_secondary;
+    text-transform: capitalize;
+    margin-bottom: 0;
+  }
+}
+
+@mixin iconStyle($size) {
+  figure {
+    margin: 0;
+    svg {
+      width: $size;
+      height: $size;
+    }
+  }
+}
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin progressWithGradient($color, $rgba) {
+  background-image: linear-gradient(
+    45deg,
+    $rgba 25%,
+    transparent 25%,
+    transparent 50%,
+    $rgba 50%,
+    $rgba 75%,
+    transparent 75%,
+    transparent
+  );
+
+  .progress-bar-striped {
+    background-color: $color !important;
+  }
+}
+@mixin customIconStyle($color) {
+  color: $color important;
+  &.stroke {
+    svg {
+      path {
+        stroke: $color !important;
+      }
+    }
+  }
+  &.path {
+    svg {
+      path {
+        fill: $color !important;
+      }
+    }
+  }
+}
+@mixin iconColors($color, $rgba) {
+  figure {
+    svg {
+      path {
+        &.stroke {
+          stroke: $color;
+        }
+        &.remove-stroke {
+          stroke: none;
+        }
+        &.fill {
+          fill: $color;
+        }
+        &.fill-rgba {
+          fill: $rgba;
+        }
+      }
+    }
+  }
+}

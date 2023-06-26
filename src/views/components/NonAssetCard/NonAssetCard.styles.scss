@@ -1,0 +1,68 @@
+@import "~assets/scss/mixins";
+
+.non-asset {
+  background: rgba(230, 232, 238, 0.3);
+  border-radius: 16px;
+  min-width: 345px;
+  &__card {
+    &-top {
+      border-bottom: 1px solid rgba(149, 157, 178, 0.5);
+      padding: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      &-left {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        &-text {
+          font-family: "Sofia Pro";
+          font-size: 14px;
+          line-height: 16px;
+          color: #7e7e8f;
+        }
+      }
+      &-right {
+        font-family: "Sofia Pro";
+        font-size: 30px;
+        line-height: 34px;
+        color: #2e2e3a;
+      }
+    }
+    &-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      &-card {
+        padding: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:not(:last-child) {
+          border-right: 1px solid rgba(149, 157, 178, 0.5);
+        }
+        display: flex;
+        gap: 20px;
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+        &-text {
+          font-family: "Sofia Pro Light";
+          font-size: 11px;
+          line-height: 16px;
+          color: #7e7e8f;
+          @include moreThanMobile() {
+            font-size: 12px;
+          }
+          &-bold {
+            font-family: "Sofia Pro Bold";
+            font-size: 16px;
+            line-height: 16px;
+            color: #2e2e3a;
+          }
+        }
+      }
+    }
+  }
+}

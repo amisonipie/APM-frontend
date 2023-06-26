@@ -1,0 +1,20 @@
+.headingIC {
+  @include flex(flex-start, center);
+  &--figure {
+    margin: 0;
+    margin-right: 1rem;
+    svg {
+      path {
+        stroke: $primary;
+      }
+    }
+  }
+  &--label {
+    font-size: 1.5rem !important;
+    color: #2a347b !important;
+    margin-bottom: 0 !important;
+    @include respond(md) {
+      font-size: 1.5rem !important;
+    }
+  }
+}

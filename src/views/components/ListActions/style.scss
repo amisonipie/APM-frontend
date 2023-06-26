@@ -1,0 +1,17 @@
+.listActions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__icon {
+    margin-bottom: 0;
+    cursor: pointer;
+    svg {
+      width: $listing_medium_icon;
+      height: $listing_medium_icon;
+    }
+    @include customIconStyle($primary);
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+}

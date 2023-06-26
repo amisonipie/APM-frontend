@@ -1,0 +1,75 @@
+@import "~assets/scss/mixins";
+
+.asset-card {
+  margin-top: 20px;
+  background: rgba(230, 232, 238, 0.3);
+  border-radius: 16px;
+
+  &__upper {
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(149, 157, 178, 0.5);
+    &-top {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      width: 100%;
+      min-height: 80px;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(149, 157, 178, 0.5);
+      }
+      &-text {
+        font-family: "Sofia Pro Light";
+        font-size: 11px;
+        line-height: 16px;
+        color: #7e7e8f;
+        @include moreThanMobile() {
+          font-size: 12px;
+        }
+        &-bold {
+          font-family: "Sofia Pro Bold";
+          font-size: 16px;
+          line-height: 16px;
+          color: #2e2e3a;
+        }
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &-inner {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 80px;
+      &:not(:last-child) {
+        border-right: 1px solid rgba(149, 157, 178, 0.5);
+      }
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+      &-text {
+        font-family: "Sofia Pro Light";
+        font-size: 11px;
+        line-height: 16px;
+        color: #7e7e8f;
+        @include moreThanMobile() {
+          font-size: 12px;
+        }
+        &-bold {
+          font-family: "Sofia Pro Bold";
+          font-size: 16px;
+          line-height: 16px;
+          color: #2e2e3a;
+        }
+      }
+    }
+  }
+}

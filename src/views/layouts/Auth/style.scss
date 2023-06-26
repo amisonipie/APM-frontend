@@ -1,0 +1,143 @@
+.authLayout {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  background-image: url("../../../assets/imgs/signInBG.svg");
+  background-position: 100% 100%;
+  background-size: cover;
+  position: relative;
+  background-repeat: no-repeat;
+  padding: 2% 5%;
+  a {
+    color: $primary_green !important;
+    text-decoration: none;
+    font-family: $font_family_primary;
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-style: normal;
+    transition: $apm_transition;
+    -webkit-transition: $apm_transition;
+    -moz-transition: $apm_transition;
+    -ms-transition: $apm_transition;
+    -o-transition: $apm_transition;
+    &:hover,
+    &:focus {
+      color: $primary_support !important;
+    }
+  }
+  &__content {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+  }
+  &__logo {
+    min-height: 15vh;
+    transition: $apm_transition;
+    -webkit-transition: $apm_transition;
+    -moz-transition: $apm_transition;
+    -ms-transition: $apm_transition;
+    -o-transition: $apm_transition;
+
+    img {
+      width: 12%;
+      height: auto;
+    }
+
+    @include respond(md) {
+      img {
+        width: 20%;
+      }
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    @include respond(sm) {
+      img {
+        width: 35%;
+      }
+    }
+  }
+
+  &__imageContainer {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    img {
+      width: 90%;
+      height: auto;
+      mix-blend-mode: luminosity;
+    }
+    p {
+      line-height: 1.5;
+      text-align: center;
+      font-family: $font_family_secondary;
+      font-size: 2rem;
+      margin-top: 3rem;
+      color: $primary_support;
+    }
+  }
+  &__formContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    align-items: center;
+    color: $theme-dark-heading-color;
+    
+    h4 {
+      color: inherit;
+    }
+    p {
+      color: $theme-dark-text-color;
+    }
+    &__box {
+      width: 100%;
+      &__children {
+        z-index: 9999;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    @include respond(md) {
+      justify-content: center;
+    }
+
+    &__logout {
+      margin-top: 2rem;
+      cursor: pointer;
+      cursor: pointer;
+      color: $primary_support;
+
+      &--icon {
+        margin-right: 1rem;
+      }
+      &--icon,
+      &--text {
+        transition: $apm_transition;
+        -webkit-transition: $apm_transition;
+        -moz-transition: $apm_transition;
+        -ms-transition: $apm_transition;
+        -o-transition: $apm_transition;
+
+        color: $primary_green;
+        font-size: 1.2rem;
+      }
+
+      &:hover {
+        .authLayout__footer__logout {
+          &--icon,
+          &--text {
+            color: $primary_support;
+          }
+        }
+      }
+    }
+  }
+}

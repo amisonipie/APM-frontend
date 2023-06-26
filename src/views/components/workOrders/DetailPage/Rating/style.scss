@@ -1,0 +1,66 @@
+.requestorRating {
+  min-width: 600px !important;
+  max-width: 600px !important;
+
+  @include respond(sm) {
+    min-width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__icon {
+    svg {
+      width: 200px !important;
+    }
+  }
+  &__heading {
+    font-family: Sofia Pro Medium;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2.5rem;
+  }
+  &__list {
+    margin: 0;
+    margin-bottom: 3rem;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    &__item {
+      display: inline-block;
+      cursor: pointer;
+      &__icon {
+        &.active {
+          svg {
+            path {
+              fill: gold;
+            }
+          }
+        }
+      }
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  &__cancel {
+    margin-top: 1rem;
+    background: none;
+    border: none;
+    color: black !important;
+    font-size: 1.2rem !important;
+    font-weight: bold;
+    background: none !important;
+    background-color: transparent !important;
+    &:hover {
+      color: black !important;
+      box-shadow: none !important;
+      background: none !important;
+      background-color: transparent !important;
+    }
+  }
+}

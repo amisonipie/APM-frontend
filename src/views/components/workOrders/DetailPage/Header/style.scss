@@ -1,0 +1,37 @@
+.workOrder_detail {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    &__owner {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border: $apm-border;
+      padding: 1rem 1rem 0rem;
+      border-radius: 10px;
+      &__profile {
+        margin-left: 1rem;
+      }
+    }
+  }
+  &--printer {
+    transition: $apm-transition;
+    margin-bottom: 1rem;
+    color: $text-color;
+    -webkit-transition: $apm-transition;
+    -moz-transition: $apm-transition;
+    -ms-transition: $apm-transition;
+    -o-transition: $apm-transition;
+    &:hover {
+      color: #626262;
+    }
+    &:active,
+    &:focus {
+      border: none;
+      outline: none;
+    }
+  }
+}

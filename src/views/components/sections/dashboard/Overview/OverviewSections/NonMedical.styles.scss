@@ -1,0 +1,152 @@
+@import "~assets/scss/mixins";
+
+.non-medical-section {
+  background: #fff;
+  padding: 45px 0px;
+
+  // Header Styles
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    padding: 0px 16px;
+    gap: 20px;
+    @include moreThanTablet() {
+      padding: 0px 45px;
+      flex-direction: row;
+      align-items: center;
+    }
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      &-bar {
+        height: 32px;
+        width: 16px;
+        background: #5bb647;
+        border-radius: 4px;
+      }
+      &-title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 30px;
+        color: #1a1d1f;
+      }
+    }
+  }
+
+  // Stats Styles
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 16px;
+    gap: 20px;
+    @include moreThanTablet() {
+      margin-top: 35px;
+      padding: 0px 45px;
+      align-items: center;
+      flex-direction: row;
+    }
+    &-total {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+      @include moreThanTablet() {
+        margin-top: 35px;
+        gap: 120px;
+        align-items: flex-end;
+        flex-direction: row;
+      }
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.03em;
+        color: #1a1d1f;
+        margin-bottom: 0px;
+      }
+    }
+
+    &-warranty {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      &-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+        &-text {
+          &-h {
+            margin-bottom: 5px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 16px;
+            color: #7e7e8f;
+          }
+          &-v {
+            margin-bottom: 0px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 16px;
+            color: #2e2e3a;
+          }
+        }
+      }
+    }
+
+    &-select {
+      position: relative;
+      &::after {
+        content: url(https://raw.githubusercontent.com/gist/usamatufail/c9b295030a6297df8d04cecb690f1571/raw/8c5e27033a27b90c92305927ced60de5424bca87/dropdown.svg);
+        position: absolute;
+        top: 50%;
+        right: 26px;
+        transform: translateY(-55%);
+      }
+      select {
+        min-height: 36px;
+        min-width: 100%;
+        padding: 0px 32px 0px 16px;
+        @include moreThanTablet() {
+          min-width: 102px;
+          padding: 0px 52px 0px 26px;
+        }
+        font-family: "Sofia Pro Light";
+        font-style: normal;
+        font-size: 13px;
+        line-height: 24px;
+        color: #959db2;
+        border: 1px solid #959db2;
+        box-sizing: border-box;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &:focus-visible {
+          outline: none;
+        }
+        option {
+          color: #959db2;
+          min-height: 36px;
+        }
+      }
+    }
+  }
+
+  // Chart Styles
+  &__chart {
+    min-height: 288px;
+    margin-top: 35px;
+    position: relative;
+  }
+}

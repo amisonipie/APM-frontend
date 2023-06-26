@@ -1,0 +1,111 @@
+@import "./FieldValidation/style.scss";
+
+.form-group {
+  position: relative;
+  .select__control,
+  .React__control.select__control--is-focused,
+  .React__control.React__control--is-focused,
+  .form-control,
+  .flatpickr-input {
+    padding: 2.5rem;
+    color: #2a347b;
+    border: $apm-border;
+    border-radius: 4px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: none;
+    outline: none;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+    font-family: $font_family_secondary;
+    font-size: 1.2rem;
+    &::placeholder {
+      font-family: Sofia Pro Light;
+      letter-spacing: 0.8px;
+      color: #caced8;
+      font-size: 1.2rem;
+    }
+  }
+  .customDatePicker {
+    padding: 1.7rem;
+  }
+  label {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-family: $font_family_secondary;
+    &.required,
+    &.optional {
+      &::after {
+        font-size: 2rem;
+        position: absolute;
+        right: 0;
+      }
+    }
+    &.required {
+      &::after {
+        content: "*";
+        color: $red;
+      }
+    }
+    &.optional {
+      &::after {
+        content: "Optional";
+        color: $green;
+        font-size: 1rem;
+      }
+    }
+  }
+  .select__control,
+  .React__control.select__control--is-focused,
+  .React__control.React__control--is-focused {
+    padding: 0.2rem 0.2rem !important;
+  }
+  .select {
+    &__placeholder {
+      color: #caced8;
+      font-weight: 400 !important;
+      font-family: Sofia Pro Light;
+      letter-spacing: 0.5px;
+      color: #caced8;
+      font-size: 1.2rem;
+      transform: translateY(-51%);
+      width: 100%;
+    }
+  }
+
+  .select__menu,
+  .React__menu {
+    border-radius: 10px;
+    box-shadow: 0px 15px 25px rgba(198, 196, 228, 0.2);
+    .select__menu-list,
+    .React__menu-list {
+      padding: 0;
+      .select__option,
+      .React__option {
+        padding: 1.5rem;
+        &:nth-child(1) {
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px;
+        }
+        &:last-child() {
+          border-bottom-left-radius: 10px;
+          border-bottom-right-radius: 10px;
+        }
+        &:not(:last-child) {
+          border-bottom: $apm-border;
+        }
+
+        &:hover {
+          background-color: lighten($color: $primary, $amount: 10%);
+          color: $white;
+        }
+        &.select__option--is-selected,
+        &.React__option--is-selected {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}

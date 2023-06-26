@@ -1,0 +1,100 @@
+.cardView {
+  &__header {
+    padding: 1.3rem 1.5rem 0;
+    // margin-bottom: 0.1rem;
+
+    &__badgeContainer {
+      display: flex;
+      // align-items: flex-start;
+      flex-wrap: wrap;
+      // flex-wrap: wrap;
+      justify-content: flex-start;
+      &__status {
+        background: rgba(149, 157, 178, 0.05);
+        color: $text_color;
+        font-size: 1rem;
+        font-family: $font_family_secondary;
+        padding: 0.8rem 01rem;
+        text-transform: capitalize;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #959DB2;
+        background: rgba(81, 69, 158, 0.03);
+        // &::not(:last-child) {
+        margin-right: 1rem;
+        // }
+        // &.main {
+        margin-bottom: 1rem;
+        // }
+
+        &.purple {
+          background-color: $status_purple_rgba_light !important;
+          color: $status_purple !important;
+        }
+        &.red {
+          background-color: $status_red_rgba_light !important;
+          color: $status_red !important;
+        }
+        &.red_dark {
+          background-color: $status_red_dark_rgba_light !important;
+          color: $status_red_dark !important;
+        }
+        &.blue {
+          background-color: $status_blue_rgba_light !important;
+          color: $status_blue !important;
+        }
+        &.black {
+          background-color: $status_black_rgba_light !important;
+          color: $status_black !important;
+        }
+        &.green {
+          background-color: $status_green_rgba_light !important;
+          color: $status_green !important;
+        }
+        &.green_dark {
+          background-color: $status_green_dark_rgba_light !important;
+          color: $status_green_dark !important;
+        }
+        &.yellow {
+          background-color: $status_yellow_rgba_light !important;
+          color: $status_yellow !important;
+        }
+        &.brown {
+          background-color: $status_brown_rgba_light !important;
+          color: $status_brown !important;
+        }
+        &.brown_dark {
+          background-color: $status_brown_dark_rgba_light !important;
+          color: $status_brown_dark !important;
+        }
+      }
+    }
+    &__ticketId {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+      &--text,
+      &--icon {
+        margin-bottom: 0;
+      }
+      &--text {
+        color: $text_color;
+        font-size: 1rem;
+        font-family: $font_family_secondary;
+
+        margin-right: 0.5rem;
+      }
+      &--icon {
+        svg {
+          width: $listing_medium_icon;
+          height: $listing_medium_icon;
+        }
+      }
+    }
+  }
+}

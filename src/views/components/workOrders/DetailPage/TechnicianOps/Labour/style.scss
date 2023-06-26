@@ -1,0 +1,79 @@
+.LabourCards {
+  background: #ffffff;
+  box-shadow: 0px 5px 10px rgba(198, 196, 228, 0.2);
+  border-radius: 10px !important;
+  height: 85px;
+
+  .form-control {
+    padding: 0 !important;
+    border: none !important;
+    text-align: center !important;
+  }
+  .stick {
+    font-size: 2rem;
+    color: $primary;
+  }
+}
+.time {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.labour {
+  &__row {
+    transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -webkit-transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -moz-transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -ms-transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    -o-transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+
+    &__user {
+      display: flex;
+
+      &--avatar {
+        width: 4rem;
+        height: 4rem;
+        margin: 0;
+        margin-right: 1.5rem;
+      }
+      &__infoContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: 7px;
+        &--text,
+        &--userName {
+          margin: 0;
+          text-transform: capitalize;
+          margin-bottom: 0.2rem;
+        }
+        &--text {
+          color: $text_color;
+          font-size: 0.9rem;
+          line-height: 1;
+        }
+        &--userName {
+          font-weight: bold;
+          color: #1c295d;
+          font-size: 1rem;
+          white-space: nowrap;
+          max-width: 100px;
+        }
+      }
+    }
+    &__time {
+      &--text {
+        font-weight: bold;
+        color: $text_color;
+        font-size: 2rem;
+        line-height: 1;
+        letter-spacing: 5px;
+      }
+    }
+  }
+}
+.technician-label {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 100%;
+}

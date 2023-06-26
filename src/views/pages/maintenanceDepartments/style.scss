@@ -1,0 +1,15 @@
+.mdList {
+  display: flex;
+  flex-direction: column;
+  &__Actions {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .basic-single {
+      min-width: 300px;
+    }
+    #drawer {
+      margin-left: auto !important;
+    }
+  }
+}

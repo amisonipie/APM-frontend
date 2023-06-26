@@ -1,0 +1,42 @@
+@import "~assets/scss/mixins";
+
+.maintenance {
+  margin-bottom: 26.4px;
+  &__header {
+    padding: 0px 0px 25px 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &-buttons {
+      display: flex;
+      gap: 5px;
+      background-color: #dfe2eb;
+      padding: 5px;
+      border-radius: 10px;
+    }
+    &-filter {
+      display: flex;
+      align-items: center;
+      gap: 26.4px;
+      &-refresh {
+        cursor: pointer;
+        padding: 12px;
+        background: #ffffff;
+        box-shadow: 0px 5px 10px rgba(198, 196, 228, 0.2);
+        border-radius: 5px;
+      }
+    }
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26.4px;
+    @include moreThanTablet() {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  &__avg-card {
+    margin-top: 26.4px;
+  }
+}

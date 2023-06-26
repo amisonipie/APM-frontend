@@ -1,0 +1,69 @@
+.workOrder_detail {
+  &__actions {
+    background-color: $primary_green;
+    color: $primary_support;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    margin-left: 260px;
+    width: calc(100% - 260px);
+
+    &.menu-collapsed {
+      margin-left: 80px;
+      width: calc(100% - 80px);
+    }
+    @include respond(lg) {
+      margin-left: 0px;
+      width: calc(100%);
+    }
+
+    left: 0;
+    flex-wrap: wrap;
+    &--message {
+      font-size: 1.6rem;
+      margin-right: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0;
+      font-family: $font_family_secondary;
+    }
+    &__btnContainer {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &__btn {
+        opacity: 0.9;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+
+        transition: all 0.35s ease-in-out;
+        -webkit-transition: all 0.35s ease-in-out;
+        -moz-transition: all 0.35s ease-in-out;
+        -ms-transition: all 0.35s ease-in-out;
+        -o-transition: all 0.35s ease-in-out;
+
+        &--text {
+          color: $primary_support;
+          font-size: 1.6rem;
+        }
+        &:hover {
+          opacity: 1;
+        }
+        &:not(:last-child) {
+          margin-right: 1rem;
+        }
+        background-color: $primary !important;
+
+        &.red {
+          background-color: $red !important;
+        }
+      }
+    }
+  }
+}

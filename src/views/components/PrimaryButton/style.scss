@@ -1,0 +1,137 @@
+$btn-box-shadow: 0px 5px 10px rgba(198, 196, 228, 0.2);
+
+@mixin contentStyle($color) {
+  .custom-primary-btn {
+    &--text {
+      color: $color !important;
+    }
+    &--icon {
+      @include customIconStyle($color);
+    }
+  }
+}
+
+.custom-primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1rem;
+  background-color: $primary_support !important;
+  box-shadow: $btn-box-shadow;
+  &.no-box-shadow,
+  &.no-box-shadow:hover {
+    box-shadow: none;
+  }
+  &.bordered {
+    border: 0.5px solid $primary_support !important;
+  }
+  border-radius: 10px;
+
+  &.border-2 {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+  }
+  &--icon {
+    margin-bottom: 0;
+    svg {
+      width: $listing_small_icon;
+      height: $listing_small_icon;
+    }
+    @include customIconStyle($primary);
+  }
+  &--text {
+    color: $primary;
+    font-family: $font_family_secondary;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+  }
+  // &:focus,
+  &:hover {
+    background-color: $primary !important;
+    box-shadow: $btn-box-shadow !important;
+    .custom-primary-btn {
+      &--text {
+        color: $primary_support;
+      }
+      &--icon {
+        @include customIconStyle($primary_support);
+      }
+    }
+  }
+
+  // lightGray btn styling
+  &.lightGray {
+    background-color: $lightGray !important;
+    @include contentStyle($text_color);
+    box-shadow: none !important;
+    // &:focus,
+    &:hover {
+      background-color: $lightGray !important;
+      @include contentStyle($text_color);
+
+      box-shadow: none !important;
+    }
+  }
+
+  // solid btn styling
+  &.solid {
+    background-color: $green !important;
+    @include contentStyle($primary_support);
+    // &:focus,
+    &:hover {
+      background-color: $green !important;
+      @include contentStyle($primary_support);
+    }
+  }
+  // red btn styling
+  &.red {
+    background-color: $red !important;
+    @include contentStyle($primary_support);
+    // &:focus,
+    &:hover {
+      background-color: $red !important;
+      @include contentStyle($primary_support);
+    }
+  }
+
+  // primary btn styling
+  &.primary {
+    background-color: $primary !important;
+    @include contentStyle($primary_support);
+    // &:focus,
+    &:hover {
+      background-color: $primary !important;
+      @include contentStyle($primary_support);
+    }
+  }
+  // primary outline btn styling
+  &.primary-outline {
+    background-color: $primary_support !important;
+    border: 0.5px solid $primary !important;
+    @include contentStyle($primary);
+    // &:focus,
+    &:hover {
+      background-color: $primary_support !important;
+      @include contentStyle($primary);
+    }
+  }
+
+  &.link-primary {
+    text-decoration: underline;
+    background-color: transparent !important;
+    box-shadow: none !important;
+    font-size: 1rem;
+    @include contentStyle($primary);
+    &:hover {
+      background-color: transparent !important;
+      box-shadow: none !important;
+      @include contentStyle($primary);
+    }
+  }
+}
+.showModalTop {
+  z-index: 9999;
+}

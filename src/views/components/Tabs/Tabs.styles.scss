@@ -1,0 +1,89 @@
+@import "~assets/scss/mixins";
+
+.tabs-component {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin-top: -30px;
+  overflow-x: scroll;
+  margin-left: -2.2rem;
+  min-width: calc(100vw - 260px);
+  @include moreThanTablet() {
+    overflow: unset;
+  }
+  @media screen and (max-width: 1200px) {
+    min-width: 100vw;
+  }
+  &__tabs {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 175px;
+    &-box {
+      padding-top: 30px;
+      padding-bottom: 20px;
+      cursor: pointer;
+      display: flex;
+      gap: 12px;
+      &-txt {
+        font-family: "Sofia Pro Light";
+        font-size: 16px;
+        line-height: 24px;
+        color: #959db3;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+      }
+    }
+    &-divider {
+      width: 100%;
+      height: 2px;
+      background: #2a347b;
+      visibility: hidden;
+      transition: all;
+    }
+    .tabs-component__inner-divider.divider-show {
+      visibility: visible;
+      animation: fadeIn linear 0.2s;
+    }
+  }
+
+  &__export {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    cursor: pointer;
+    padding-right: 30px;
+    &-icon {
+    }
+    &-text {
+      font-family: "Sofia Pro Light";
+      font-size: 16px;
+      line-height: 24px;
+      color: #959db3;
+      cursor: pointer;
+    }
+  }
+}
+
+.tabs-component__inner-box-txt.tabs-component__inner-box-txt-active {
+  color: #2a347b;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

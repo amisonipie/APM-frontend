@@ -1,0 +1,461 @@
+@import "~assets/scss/mixins";
+
+.pm-calender-section {
+  background: #fff;
+  padding: 20px 0px;
+
+  // Header Styles
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    padding: 0px 16px;
+    // gap: 20px;
+    @include moreThanTablet() {
+      padding: 0px 25px;
+      flex-direction: row;
+      align-items: center;
+    }
+    &-left {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      // gap: 20px;
+      &-bar {
+        // height: 32px;
+        // width: 16px;
+        // background: #5bb647;
+        // border-radius: 4px;
+      }
+      &-title {
+        display: flex;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        color: #1a1d1f;
+      }
+      &-button {
+        background: none !important;
+        border: none !important;
+        margin: 0px 40px 0 0;
+        padding: 0 !important;
+        &hover {
+          background: none !important;
+          border: none !important;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      margin-bottom: 20px;
+      &-button {
+        background: none !important;
+        border: none !important;
+        margin: 0px 40px;
+        padding: 0 !important;
+      }
+      &-switch {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        @include moreThanTablet() {
+          display: flex;
+        }
+        padding: 3.09px;
+        background: rgba(149, 157, 178, 0.15);
+        box-shadow: 0px 100px 80px rgba(198, 197, 217, 0.07),
+          0px 41.7776px 33.4221px rgba(198, 197, 217, 0.0503198),
+          0px 22.3363px 17.869px rgba(198, 197, 217, 0.0417275),
+          0px 12.5216px 10.0172px rgba(198, 197, 217, 0.035),
+          0px 6.6501px 5.32008px rgba(198, 197, 217, 0.0282725),
+          0px 2.76726px 2.21381px rgba(198, 197, 217, 0.0196802);
+        border-radius: 10px;
+        cursor: pointer;
+        // Active Styles
+        .pm-calender-section__header-right-switch-el.switch-active {
+          background: #fff;
+          box-shadow: 0px 100px 80px rgba(198, 197, 217, 0.07),
+            0px 41.7776px 33.4221px rgba(198, 197, 217, 0.0503198),
+            0px 22.3363px 17.869px rgba(198, 197, 217, 0.0417275),
+            0px 12.5216px 10.0172px rgba(198, 197, 217, 0.035),
+            0px 6.6501px 5.32008px rgba(198, 197, 217, 0.0282725),
+            0px 2.76726px 2.21381px rgba(198, 197, 217, 0.0196802);
+        }
+        &-el {
+          padding: 12px 26px;
+          font-family: "Sofia Pro";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 16px;
+          display: flex;
+          align-items: center;
+          color: #2a347b;
+          border-radius: 10px;
+        }
+      }
+    }
+  }
+
+  // Stats Styles
+  &__stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 16px;
+    gap: 20px;
+    @include moreThanTablet() {
+      margin-top: 35px;
+      padding: 0px 45px;
+      align-items: center;
+      flex-direction: row;
+    }
+    &-total {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-top: 20px;
+      @include moreThanTablet() {
+        margin-top: 35px;
+        gap: 120px;
+        align-items: flex-end;
+        flex-direction: row;
+      }
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 48px;
+        letter-spacing: -0.03em;
+        color: #1a1d1f;
+        margin-bottom: 0px;
+      }
+    }
+
+    &-warranty {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      &-box {
+        display: flex;
+        align-items: flex-start;
+        gap: 18px;
+        &-text {
+          &-h {
+            margin-bottom: 5px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 16px;
+            color: #7e7e8f;
+          }
+          &-v {
+            margin-bottom: 0px;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 16px;
+            color: #2e2e3a;
+          }
+        }
+      }
+    }
+
+    &-select {
+      position: relative;
+      &::after {
+        content: url(https://raw.githubusercontent.com/gist/usamatufail/c9b295030a6297df8d04cecb690f1571/raw/8c5e27033a27b90c92305927ced60de5424bca87/dropdown.svg);
+        position: absolute;
+        top: 50%;
+        right: 26px;
+        transform: translateY(-55%);
+      }
+      select {
+        min-height: 36px;
+        min-width: 100%;
+        padding: 0px 32px 0px 16px;
+        @include moreThanTablet() {
+          min-width: 102px;
+          padding: 0px 52px 0px 26px;
+        }
+        font-family: "Sofia Pro Light";
+        font-style: normal;
+        font-size: 13px;
+        line-height: 24px;
+        color: #959db2;
+        border: 1px solid #959db2;
+        box-sizing: border-box;
+        border-radius: 3px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        &:focus-visible {
+          outline: none;
+        }
+        option {
+          color: #959db2;
+          min-height: 36px;
+        }
+      }
+    }
+  }
+  .month-p {
+    text-transform: capitalize;
+    margin-right: 1rem;
+    display: inline-block;
+  }
+
+  // Chart Styles
+  &__chart {
+    min-height: 288px;
+    margin-top: 35px;
+    position: relative;
+  }
+}
+// Data styles
+.PMCFIlter {
+  background-color: #f2f5fb;
+  padding: 30px;
+}
+.PMCData {
+  background-color: #f2f5fb;
+  // padding: 30px;
+}
+
+.data {
+  display: flex;
+  margin: 0 10px;
+  background-color: #b5e4ca40;
+  padding: 20px 20px;
+  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  max-width: 250px;
+  min-width: 250px;
+}
+.data-name {
+  width: 190px;
+  margin-right: 10px;
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  // display: flex;
+}
+.data-count {
+  display: flex;
+  border-radius: 50%;
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  background-color: #b5e4ca;
+  color: #303134;
+  height: 30px;
+  width: 30px;
+  min-width: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  max-height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+.data-col {
+  width: calc(100% - 150px);
+  border: 1px solid #d7d7d7;
+  padding: 18px 25px;
+  display: flex;
+  justify-content: space-between;
+  overflow: auto;
+  // min-width: 900px;
+  // max-width: 85%;
+  &__badges {
+    width: 70%;
+    min-width: 830px;
+    // flex-wrap: wrap;
+  }
+}
+.pmRow {
+  min-height: 100px;
+  display: flex;
+}
+.data-month {
+  width: 15%;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  // padding: 30px;
+  text-transform: capitalize;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 27px;
+  /* identical to box height */
+
+  /* Secondary Text */
+
+  color: #717579;
+}
+.pm-cal {
+  margin-top: 8.2rem !important;
+  padding-bottom: 50px !important;
+}
+.pmc-filter-text {
+  // font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 600 !important;
+  font-size: 20px;
+  line-height: 25px;
+
+  /* Colors/Primary */
+
+  color: #1a355e;
+}
+.data-button {
+  width: 20%;
+}
+.data-button-span-1 {
+  margin-right: 15px;
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  /* identical to box height, or 92% */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+.data-button-span-2 {
+  font-family: "Sofia Pro";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 118% */
+
+  text-align: center;
+
+  color: #ffffff;
+}
+.pmc-filter {
+  display: flex;
+}
+.pmc-filter-img {
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.PMC-modal-btn {
+  min-width: 150px;
+  max-width: 150px;
+  &:hover {
+    .data-button-span-2 {
+      color: #1a1d1f !important;
+    }
+    .data-button-span-1 {
+      color: #1a1d1f !important;
+    }
+  }
+}
+.PMCModal-main {
+  .modal-dialog {
+    max-width: 43% !important;
+    background-color: #f2f5fb;
+    border-radius: 30px !important;
+  }
+  .modal-content {
+    border-radius: 30px !important;
+  }
+  .modal-header {
+    padding: 3rem 4rem 0.8rem 4rem !important;
+    border-bottom: 3px solid #f2f5fb !important;
+    background: none !important;
+  }
+  .modal-title {
+    // font-family: 'Sofia Pro';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 40px;
+
+    color: #000000;
+  }
+  .PMCModel-h4 {
+    padding: 1.5rem 3.5rem 0 3.5rem;
+    text-transform: capitalize;
+    // font-family: 'Sofia Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+
+    /* Color Primary */
+
+    color: #2a347b;
+  }
+  .PMCModal-data-main {
+    padding: 5% 20% !important;
+
+    height: 500px;
+    overflow-y: scroll;
+  }
+  .PMCModal-data {
+    display: flex;
+    margin: 15px 10px;
+    background-color: #b5e4ca40;
+    padding: 20px 10px 20px 0;
+    justify-content: space-between;
+  }
+  .PMCModal-data-name {
+    margin: 0 20px;
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    align-items: center;
+    display: flex;
+  }
+  .PMCModal-data-count {
+    display: flex;
+    border-radius: 50%;
+    font-family: "Sofia Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    background-color: #b5e4ca;
+    color: #303134;
+    height: 30px;
+    width: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  .PMCModal-data-col {
+    border: 1px solid #d7d7d7;
+    padding: 18px 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .PMCModal-img-div {
+    cursor: pointer;
+  }
+}

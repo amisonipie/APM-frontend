@@ -1,0 +1,195 @@
+// Core variables and mixins
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/mixins";
+
+// Core variables and mixins overrides
+@import "../../core/variables/variables";
+@import "~bootstrap/scss/_variables.scss";
+
+// Overrides user variable
+@import "../../core/variables/components-variables";
+
+.dropZoneContainer {
+  .dropzone {
+    background: $body-bg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px dashed #959db2;
+    box-sizing: border-box;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    min-height: 50px;
+    max-height: 50px;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+    }
+    &:active {
+      transform: translate(0%, 5%);
+      -webkit-transform: translate(0%, 5%);
+      -moz-transform: translate(0%, 5%);
+      -ms-transform: translate(0%, 5%);
+      -o-transform: translate(0%, 5%);
+    }
+    &__content {
+      width: 100%;
+      padding-left: 2rem;
+      @include flex(flex-start, center);
+      figure {
+        background: $primary;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        width: 28px;
+        height: 28px;
+        margin: 0;
+        @include flex(center, center);
+        svg {
+          margin: 0;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      p {
+        margin: 0;
+        font-family: $font_family_secondary;
+        font-weight: normal;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &--thumb-container {
+    @include flex(flex-start, flex-start);
+    flex-direction: column;
+
+    margin-top: 3rem;
+    .dz-thumb {
+      @include flex(space-between, flex-end);
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      width: 100%;
+      box-sizing: border-box;
+      &__file {
+        @include flex(flex-start, flex-end);
+        width: 90%;
+        pointer-events: none;
+        opacity: 0.8;
+        overflow: hidden;
+        &.active {
+          pointer-events: all;
+          opacity: 1;
+        }
+
+        figure {
+          margin: 0;
+          svg {
+            width: 30px;
+            height: 30px;
+          }
+        }
+        &__content {
+          @include flex(flex-start, flex-start);
+          flex-direction: column;
+          width: 100%;
+          margin-left: 2rem;
+
+          &--fileName {
+            display: inline-block;
+            max-width: 80%;
+            font-family: $font_family_secondary;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: #959db2;
+          }
+          &--progress {
+            border-radius: 100px;
+            -webkit-border-radius: 100px;
+            -moz-border-radius: 100px;
+            -ms-border-radius: 100px;
+            -o-border-radius: 100px;
+            height: 7px;
+          }
+        }
+      }
+      &--retry {
+        @include flex(flex-end, flex-end);
+        flex-direction: column;
+        cursor: pointer;
+        figure {
+          &.active {
+            animation: spin 2s linear infinite;
+            -webkit-animation: spin 2s linear infinite;
+            -moz-animation: spin 2s linear infinite;
+            @-moz-keyframes spin {
+              100% {
+                transform: rotate(-360deg);
+                -moz-transform: rotate(-360deg);
+                -webkit-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+              }
+            }
+            @-webkit-keyframes spin {
+              100% {
+                transform: rotate(-360deg);
+                -webkit-transform: rotate(-360deg);
+                -moz-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+              }
+            }
+            @keyframes spin {
+              100% {
+                transform: rotate(-360deg);
+                -webkit-transform: rotate(-360deg);
+                -moz-transform: rotate(-360deg);
+                -ms-transform: rotate(-360deg);
+                -o-transform: rotate(-360deg);
+              }
+            }
+          }
+          margin: 0;
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
+        span {
+          font-family: $font_family_secondary;
+          font-size: 1.2rem;
+          color: $red;
+          line-height: 1;
+        }
+      }
+      &--delete {
+        margin: 0;
+        svg {
+          opacity: 0.5;
+          transition: $apm_transition;
+          -webkit-transition: $apm_transition;
+          -moz-transition: $apm_transition;
+          -ms-transition: $apm_transition;
+          -o-transition: $apm_transition;
+          &:hover {
+            opacity: 1;
+          }
+          color: #959db2;
+          padding: 0;
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+  }
+}

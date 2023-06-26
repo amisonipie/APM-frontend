@@ -1,0 +1,42 @@
+.warranty-card {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+
+  @media screen and (max-height: 915px) {
+    margin-bottom: 3vh;
+  }
+
+  p {
+    margin: 0px;
+  }
+  &-icon {
+    width: 25.5px;
+    height: 25.5px;
+    // margin-top: 13px;
+  }
+  &-heading {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    // line-height: 16px;
+    letter-spacing: -0.01em;
+    color: #33383f;
+    align-self: center;
+  }
+  &-warranty-text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+    color: #7e7e8f;
+    align-self: center;
+  }
+}

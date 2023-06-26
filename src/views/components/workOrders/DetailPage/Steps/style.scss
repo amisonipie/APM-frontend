@@ -1,0 +1,86 @@
+.workOrder_detail {
+  &__steps {
+    &__header {
+      padding: 2rem 2rem 0;
+      @include alignHeading;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      &__box {
+        flex-grow: 1;
+        &:not(:last-child) {
+          margin-right: 1.5rem;
+        }
+        &__item {
+          border-bottom: 2px dashed $text_color;
+          text-align: center;
+          min-width: 150px;
+          max-width: 170px;
+          flex-grow: 1;
+          margin-bottom: 1.5rem;
+          &.active {
+            &.green {
+              border-bottom: solid;
+              border-color: $status_green;
+              @include iconColors($status_green, $status_green_rgba);
+            }
+            &.green_dark {
+              border-bottom: solid;
+              border-color: $status_green_dark;
+              @include iconColors($status_green_dark, $status_green_dark_rgba);
+            }
+            &.black {
+              border-bottom: solid;
+              border-color: $status_black;
+              @include iconColors($status_black, $status_black_rgba);
+            }
+            &.brown {
+              border-bottom: solid;
+              border-color: $status_brown;
+
+              @include iconColors($status_brown, $status_brown_rgba);
+            }
+            &.brown_dark {
+              border-bottom: solid;
+              border-color: $status_brown_dark;
+
+              @include iconColors($status_brown_dark, $status_brown_dark_rgba);
+            }
+            &.yellow {
+              border-bottom: solid;
+              border-color: $status_yellow;
+              @include iconColors($status_yellow, $status_yellow_rgba);
+            }
+            &.red {
+              border-bottom: solid;
+              border-color: $status_red;
+              @include iconColors($status_red, $status_red_rgba);
+            }
+            &.red_dark {
+              border-bottom: solid;
+              border-color: $status_red_dark;
+              @include iconColors($status_red_dark, $status_red_dark_rgba);
+            }
+            &.purple {
+              border-bottom: solid;
+              border-color: $status_purple;
+              @include iconColors($status_purple, $status_purple_rgba);
+            }
+            &.blue {
+              border-bottom: solid;
+              border-color: $status_blue;
+              @include iconColors($status_blue, $status_blue_rgba);
+            }
+            h4 {
+              color: #000;
+            }
+          }
+          @include iconStyle(35px);
+          h4 {
+            font-size: 1rem;
+            color: $text_color;
+          }
+        }
+      }
+    }
+  }
+}
